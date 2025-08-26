@@ -5,49 +5,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | Missoula |Earthen Paws</title>
     <link rel="icon" type="image/x-icon" href="images/favicon.png"> <!--This adds the icon on the tab of the web browser-->
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.css"
+    />
 </head>
 
-<body>
-    <header><h1>Earthen Paws Dog Walking</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="page2.html">Rates</a>
-            <a href="page3.html">Contact Us</a></nav>
-    </header>
+<body class="bg-success bg-gradient">
+<div class="container pt-2 pb-5 bg-light">
+
+<nav class="navbar navbar-expand-md navbar-light bg-success-subtle">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Earthen Paws Dog Walking</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link" href="index.html">Home</a>
+        <a class="nav-link" href="page2.html">Rates</a>
+        <a class="nav-link active" aria-current="page" href="page3.html">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</nav>
     
     <main>
-        
 
-        <section id="Contact Form"> <!--Here is a contact form-->
+    <h2 class="text-center m-3">Contact Us</h2>
 
-            <h2>Contact Us</h2>
+    <!--Using Bootstrap form classes-->
 
-            <form action="">
-                <input type="text" name="FirstName" placeholder="First Name"><br>
-                <input type="text" name="LastName" placeholder="Last Name"><br>
-                <input type="text" name="PhoneNumber" placeholder="Phone Number"><br>
-                <input type="tel" name="email" placeholder="E-mail"><br><br>
-                Please select the days you would like to request a dog walker: <br>
-                <input type="checkbox" name="weekday" value="Monday"> Monday <br>
-                <input type="checkbox" name="weekday" value="Tuesday"> Tuesday <br>
-                <input type="checkbox" name="weekday" value="Wednesday"> Wednesday <br>
-                <input type="checkbox" name="weekday" value="Thursday"> Thursday <br>
-                <input type="checkbox" name="weekday" value="Friday"> Friday <br>
-                <input type="submit" name="" id="submit">
+    <div class="container"> 
+        <div class="row g-5"> <!--USed bootstrap class row to put the form and image side by side-->
+            <form class = "col-md mb-3"> <!--Using grid col to add a break point at medium size screens to stack vertically-->
 
+        <div class="form-floating mb-3"> <!-- class form float creates the text input box with the type of inbut-->
+            <input type="text" class="form-control" id="floatingInput" placeholder="John">
+            <label for="floatingInput">First Name</label>
+        </div>
+
+         <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInput" placeholder="Doe">
+            <label for="floatingInput">Last Name</label>
+        </div>
+
+        <div class="form-floating mb-3">
+            <input type="email" class="form-control" id="floatingInput" placeholder="example@email.com">
+            <label for="floatingInput">Email Address</label>
+        </div>
+
+        <p class= "fs-6">Please select the days you would like to request a dog walker: </p>
+
+        <div class="form-check"> <!--bootstrap class form check creates our check list form-->
+            <input class="form-check-input" type="checkbox" value="Monday" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+                Monday
+             </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Tuesday" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+                Tuesday
+             </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Wednesday" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+                Wednesday
+             </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Thursday" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+                Thursday
+             </label>
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="Friday" id="flexCheckDefault">
+             <label class="form-check-label" for="flexCheckDefault">
+                Friday
+             </label>
+        </div>
+      
+        <div class="m-3">
+        <button type="submit" class="btn btn-primary">Submit</button> <!--class btn to create submit button-->
+            </div>
             </form>
-                 
+        </div>
 
-        </section>
+        <div class="col-md mb-3"> <!--adds in the image andand stacks it at screen size medium-->
+             <img src="images/skookumcutie.jpg" 
+             class="card-img-top"
+              width="500" 
+              alt="A photo of a dog sitting down on a pile of rocks">
+        </div>
+        </div>
 
-        <img src="images/skookumcutie.jpg" width="500" alt="A photo of two dogs running in the river">
 
-
-
+        
+    </div>
+    
     </main>
 
-    <footer><p>created by smstraughan 2025</p></footer>
+    <footer><p class="text-center mt-5">created by smstraughan 2025</p></footer>
 
-    
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
